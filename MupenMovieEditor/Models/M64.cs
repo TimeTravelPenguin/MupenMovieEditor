@@ -33,6 +33,6 @@ namespace MupenMovieEditor.Models
     public ushort CountryCode { get; set; }
     public string Author { get; set; }
     public string Description { get; set; }
-    public IEnumerable<uint> Inputs { get; set; }
+    public IEnumerable<InputModel> Inputs { get; set; }
   }
 }
