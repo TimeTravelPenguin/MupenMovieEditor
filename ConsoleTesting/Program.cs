@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-05-12 6:31 PM
+// 2020-05-12 7:36 PM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -15,7 +15,6 @@
 #endregion
 
 using System;
-using MupenSharp.Extensions;
 using MupenSharp.FileParsing;
 
 namespace ConsoleTesting
@@ -24,7 +23,7 @@ namespace ConsoleTesting
   {
     private static void Main()
     {
-      const string path = @"D:\_Data\Desktop\test.m64";
+      const string path = @"D:\ForkRepos\SM64TASArchive\ILs\SM64\WF - Whomp's Fortress\Shoot Into the Wild Blue\7s57ms\Shoot Into the Wild Blue.m64";
       var parser = new M64Parser();
       parser.SetFile(path);
       var m64 = parser.Parse();
@@ -32,8 +31,7 @@ namespace ConsoleTesting
       var i = 1;
       foreach (var input in m64.Inputs)
       {
-        var buttons = input.GetInputs().Join(", ");
-        Console.WriteLine($"{i++}: {buttons}");
+        Console.WriteLine($"{i++}: {input}");
       }
 
       Console.ReadKey();

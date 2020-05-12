@@ -7,7 +7,7 @@
 // File Name: InputModel.cs
 // 
 // Current Data:
-// 2020-05-12 5:20 PM
+// 2020-05-12 7:35 PM
 // 
 // Creation Date:
 // 2020-05-12 5:07 PM
@@ -16,6 +16,7 @@
 
 using System;
 using System.Linq;
+using MupenSharp.Extensions;
 
 namespace MupenSharp.Models
 {
@@ -80,6 +81,11 @@ namespace MupenSharp.Models
     public static implicit operator InputModel(byte[] input)
     {
       return new InputModel(input);
+    }
+
+    public override string ToString()
+    {
+      return $"({Convert.ToInt32(X)},{Convert.ToInt32(Y)}) {this.GetInputs().Join(", ")}";
     }
 
     public static implicit operator byte[](InputModel input)

@@ -7,7 +7,7 @@
 // File Name: M64Parser.cs
 // 
 // Current Data:
-// 2020-05-12 7:18 PM
+// 2020-05-12 8:30 PM
 // 
 // Creation Date:
 // 2020-05-12 5:22 PM
@@ -53,11 +53,15 @@ namespace MupenSharp.FileParsing
       M64 m64;
       using (var reader = new BinaryReader(_mupenFile.Open(FileMode.Open, FileAccess.Read)))
       {
-        reader.BaseStream.Seek(0x400, SeekOrigin.Begin);
         var inputs = new List<InputModel>();
 
+        // Is this how you offset to 0x400, then ready 4-bytes at a time??
+        // According to the documentation this is the case.
+        reader.BaseStream.Seek(400, SeekOrigin.Begin);
         while (reader.BaseStream.Position != reader.BaseStream.Length)
         {
+          // InputModel has implicit cast operator for byte[]
+          // Unit testing shows this works
           inputs.Add(reader.ReadBytes(4));
         }
 
