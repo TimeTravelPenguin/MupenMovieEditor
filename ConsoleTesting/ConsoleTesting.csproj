@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MupenMovieEditor\MupenMovieEditor.csproj">
-      <Project>{34ce62c5-4db5-4539-8e62-6117fae68082}</Project>
-      <Name>MupenMovieEditor</Name>
+    <ProjectReference Include="..\MupenSharp\MupenSharp.csproj">
+      <Project>{84baad70-8ff4-467e-884e-0bc91f0d5f50}</Project>
+      <Name>MupenSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

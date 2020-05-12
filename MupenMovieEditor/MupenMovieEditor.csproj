@@ -62,11 +62,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Extensions\InputExtension.cs" />
-    <Compile Include="Models\InputModel.cs" />
-    <Compile Include="Models\Input.cs" />
-    <Compile Include="Models\M64.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +88,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>

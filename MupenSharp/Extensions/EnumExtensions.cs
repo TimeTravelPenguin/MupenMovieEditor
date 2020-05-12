@@ -3,14 +3,14 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor
+// Project: MupenSharp
 // File Name: EnumExtensions.cs
 // 
 // Current Data:
-// 2020-05-12 1:46 PM
+// 2020-05-12 5:11 PM
 // 
 // Creation Date:
-// 2020-05-12 1:44 PM
+// 2020-05-12 5:07 PM
 
 #endregion
 
@@ -18,12 +18,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MupenMovieEditor.Extensions
+namespace MupenSharp.Extensions
 {
   /// <summary>
   ///   Extension methods for type <see cref="Enum" />.
   /// </summary>
-  internal static class EnumExtensions
+  public static class EnumExtensions
   {
     /// <summary>
     ///   Returns an array of type <typeparamref name="T" /> containing <see cref="Enum" /> values.

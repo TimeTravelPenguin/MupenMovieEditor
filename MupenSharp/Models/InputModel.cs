@@ -3,31 +3,27 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor
+// Project: MupenSharp
 // File Name: InputModel.cs
 // 
 // Current Data:
-// 2020-05-12 3:57 PM
+// 2020-05-12 5:20 PM
 // 
 // Creation Date:
-// 2020-05-12 11:22 AM
+// 2020-05-12 5:07 PM
 
 #endregion
 
 using System;
 using System.Linq;
 
-namespace MupenMovieEditor.Models
+namespace MupenSharp.Models
 {
-  internal class InputModel
+  public class InputModel
   {
     public sbyte X { get; set; }
     public sbyte Y { get; set; }
     public ushort Buttons { get; set; }
-
-    public InputModel()
-    {
-    }
 
     /// <summary>
     ///   InputModel representing data contained within an .m64 file.
@@ -77,7 +73,7 @@ namespace MupenMovieEditor.Models
       // Buttons = AA BB
       Buttons = BitConverter.ToUInt16(input
         .Take(2)
-        .Reverse() // Reverse because of m64 uses low-endien
+        .Reverse() // Reverse because BitConverter reverses order due to being low-endien
         .ToArray(), 0);
     }
 
@@ -92,6 +88,7 @@ namespace MupenMovieEditor.Models
       var y = unchecked((byte) input.Y);
       var buttons = BitConverter.GetBytes(input.Buttons);
 
+      // Buttons are reversed because BitConverter reverses order due to being low-endien
       return new[] {buttons[1], buttons[0], x, y};
     }
   }

@@ -1,6 +1,20 @@
-﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
+﻿#region Title Header
+
+// Name: Phillip Smith
+// 
+// Solution: MupenMovieEditor
+// Project: MupenMovieEditor
+// File Name: AssemblyInfo.cs
+// 
+// Current Data:
+// 2020-05-12 5:11 PM
+// 
+// Creation Date:
+// 2020-05-12 10:27 AM
+
+#endregion
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -32,12 +46,12 @@ using System.Windows;
 
 
 [assembly: ThemeInfo(
-    ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
-                                     //(used if a resource is not found in the page,
-                                     // or application resource dictionaries)
-    ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located
-                                              //(used if a resource is not found in the page,
-                                              // app, or any theme specific resource dictionaries)
+  ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
+  //(used if a resource is not found in the page,
+  // or application resource dictionaries)
+  ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located
+  //(used if a resource is not found in the page,
+  // app, or any theme specific resource dictionaries)
 )]
 
 
@@ -53,5 +67,3 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: InternalsVisibleTo("MupenMovieEditor.Tests")]
-[assembly: InternalsVisibleTo("ConsoleTesting")]

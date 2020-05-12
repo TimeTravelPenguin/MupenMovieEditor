@@ -3,26 +3,26 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor
+// Project: MupenSharp
 // File Name: Input.cs
 // 
 // Current Data:
-// 2020-05-12 11:28 AM
+// 2020-05-12 7:11 PM
 // 
 // Creation Date:
-// 2020-05-12 11:25 AM
+// 2020-05-12 5:07 PM
 
 #endregion
 
 using System;
 
-namespace MupenMovieEditor.Models
+namespace MupenSharp.Models
 {
   [Flags]
-  internal enum Input
+  public enum Input
   {
     CRight = 0x0001,
-    CLefts = 0x0002,
+    CLeft = 0x0002,
     CDown = 0x0004,
     CUp = 0x0008,
     R = 0x0010,

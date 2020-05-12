@@ -3,24 +3,24 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor
+// Project: MupenSharp
 // File Name: InputExtension.cs
 // 
 // Current Data:
-// 2020-05-12 1:51 PM
+// 2020-05-12 5:11 PM
 // 
 // Creation Date:
-// 2020-05-12 1:42 PM
+// 2020-05-12 5:07 PM
 
 #endregion
 
 using System.Collections.Generic;
 using System.Linq;
-using MupenMovieEditor.Models;
+using MupenSharp.Models;
 
-namespace MupenMovieEditor.Extensions
+namespace MupenSharp.Extensions
 {
-  internal static class InputExtension
+  public static class InputExtension
   {
     public static IEnumerable<Input> GetInputs(this InputModel inputModel)
     {

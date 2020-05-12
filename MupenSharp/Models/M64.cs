@@ -3,22 +3,22 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor
+// Project: MupenSharp
 // File Name: M64.cs
 // 
 // Current Data:
-// 2020-05-12 11:12 AM
+// 2020-05-12 5:11 PM
 // 
 // Creation Date:
-// 2020-05-12 10:46 AM
+// 2020-05-12 5:07 PM
 
 #endregion
 
 using System.Collections.Generic;
 
-namespace MupenMovieEditor.Models
+namespace MupenSharp.Models
 {
-  internal class M64
+  public class M64
   {
     public uint Version { get; set; }
     public uint VerticalInterrupts { get; set; }

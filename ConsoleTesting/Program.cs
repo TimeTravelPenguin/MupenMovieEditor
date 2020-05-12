@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-05-12 1:57 PM
+// 2020-05-12 6:31 PM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -15,22 +15,26 @@
 #endregion
 
 using System;
-using System.Linq;
-using MupenMovieEditor.Extensions;
-using MupenMovieEditor.Models;
+using MupenSharp.Extensions;
+using MupenSharp.FileParsing;
 
 namespace ConsoleTesting
 {
-  internal class Program
+  internal static class Program
   {
-    private static void Main(string[] args)
+    private static void Main()
     {
-      var num = BitConverter.GetBytes(0xC0182541).Reverse().ToArray();
-      var input = new InputModel(num);
-      Console.WriteLine(input.X);
-      Console.WriteLine(input.Y);
-      Console.WriteLine(input.Buttons);
-      Console.WriteLine(string.Join(", ", input.GetInputs()));
+      const string path = @"D:\_Data\Desktop\test.m64";
+      var parser = new M64Parser();
+      parser.SetFile(path);
+      var m64 = parser.Parse();
+
+      var i = 1;
+      foreach (var input in m64.Inputs)
+      {
+        var buttons = input.GetInputs().Join(", ");
+        Console.WriteLine($"{i++}: {buttons}");
+      }
 
       Console.ReadKey();
     }

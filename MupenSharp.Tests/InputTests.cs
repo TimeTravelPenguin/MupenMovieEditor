@@ -3,24 +3,24 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: MupenMovieEditor.Tests
+// Project: MupenSharp.Tests
 // File Name: InputTests.cs
 // 
 // Current Data:
-// 2020-05-12 4:00 PM
+// 2020-05-12 5:11 PM
 // 
 // Creation Date:
-// 2020-05-12 12:35 PM
+// 2020-05-12 5:08 PM
 
 #endregion
 
 using System.Linq;
 using AllOverIt.Fixture;
 using FluentAssertions;
-using MupenMovieEditor.Models;
+using MupenSharp.Models;
 using Xunit;
 
-namespace MupenMovieEditor.Tests
+namespace MupenSharp.Tests
 {
   public class InputTests : AoiFixtureBase
   {

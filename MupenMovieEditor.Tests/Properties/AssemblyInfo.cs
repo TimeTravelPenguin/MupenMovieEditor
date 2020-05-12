@@ -1,5 +1,20 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿#region Title Header
+
+// Name: Phillip Smith
+// 
+// Solution: MupenMovieEditor
+// Project: MupenMovieEditor.Tests
+// File Name: AssemblyInfo.cs
+// 
+// Current Data:
+// 2020-05-12 5:11 PM
+// 
+// Creation Date:
+// 2020-05-12 12:35 PM
+
+#endregion
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
