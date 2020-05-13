@@ -7,7 +7,7 @@
 // File Name: M64Parser.cs
 // 
 // Current Data:
-// 2020-05-13 12:02 PM
+// 2020-05-13 5:05 PM
 // 
 // Creation Date:
 // 2020-05-12 5:22 PM
@@ -69,15 +69,10 @@ namespace MupenSharp.FileParsing
         MovieDescription = reader.ReadBytesAndConvertString(0x222, Encoding.UTF8)
       };
 
-
-      // Is this how you offset to 0x400, then ready 4-bytes at a time??
-      // According to the documentation this is the case.
       var frame = 0;
       reader.BaseStream.Seek(0x400, SeekOrigin.Begin);
       while (reader.BaseStream.Position != reader.BaseStream.Length && frame < m64.InputFrames)
       {
-        // InputModel has implicit cast operator for byte[]
-        // Unit testing shows this works
         m64.Inputs.Add(reader.ReadBytes(4));
         frame++;
       }
