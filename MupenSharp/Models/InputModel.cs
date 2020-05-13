@@ -7,7 +7,7 @@
 // File Name: InputModel.cs
 // 
 // Current Data:
-// 2020-05-12 7:35 PM
+// 2020-05-13 7:53 PM
 // 
 // Creation Date:
 // 2020-05-12 5:07 PM
@@ -16,11 +16,13 @@
 
 using System;
 using System.Linq;
+using JetBrains.Annotations;
 using MupenSharp.Extensions;
+using PenguinLib.PropertyChanged;
 
 namespace MupenSharp.Models
 {
-  public class InputModel
+  public class InputModel : PropertyChangedBase
   {
     public sbyte X { get; set; }
     public sbyte Y { get; set; }
@@ -56,9 +58,14 @@ namespace MupenSharp.Models
     ///     hex input is NOT REVERSED.
     ///   </remarks>
     /// </param>
-    public InputModel(byte[] input)
+    public InputModel([NotNull] byte[] input)
     {
       // input = AA BB CC DD
+
+      if (input is null)
+      {
+        throw new ArgumentNullException(nameof(input));
+      }
 
       if (input.Length != 4)
       {
@@ -88,8 +95,14 @@ namespace MupenSharp.Models
       return $"({Convert.ToInt32(X)},{Convert.ToInt32(Y)}) {this.GetInputs().Join(", ")}";
     }
 
-    public static implicit operator byte[](InputModel input)
+
+    public static explicit operator byte[]([NotNull] InputModel input)
     {
+      if (input is null)
+      {
+        throw new ArgumentNullException(nameof(input));
+      }
+
       var x = unchecked((byte) input.X);
       var y = unchecked((byte) input.Y);
       var buttons = BitConverter.GetBytes(input.Buttons);
