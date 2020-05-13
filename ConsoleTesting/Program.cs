@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-05-12 7:36 PM
+// 2020-05-13 10:39 AM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -23,7 +23,7 @@ namespace ConsoleTesting
   {
     private static void Main()
     {
-      const string path = @"D:\ForkRepos\SM64TASArchive\ILs\SM64\WF - Whomp's Fortress\Shoot Into the Wild Blue\7s57ms\Shoot Into the Wild Blue.m64";
+      const string path = @"D:\_Data\Desktop\Shining Atop the Pyramid.m64";
       var parser = new M64Parser();
       parser.SetFile(path);
       var m64 = parser.Parse();
@@ -33,6 +33,9 @@ namespace ConsoleTesting
       {
         Console.WriteLine($"{i++}: {input}");
       }
+
+      Console.WriteLine();
+      Console.WriteLine(m64.InputFrames);
 
       Console.ReadKey();
     }
