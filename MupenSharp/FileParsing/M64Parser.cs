@@ -7,7 +7,7 @@
 // File Name: M64Parser.cs
 // 
 // Current Data:
-// 2020-05-12 8:30 PM
+// 2020-05-13 12:02 PM
 // 
 // Creation Date:
 // 2020-05-12 5:22 PM
@@ -15,8 +15,8 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.IO;
+using MupenSharp.Extensions;
 using MupenSharp.Models;
 
 namespace MupenSharp.FileParsing
@@ -50,25 +50,36 @@ namespace MupenSharp.FileParsing
         throw new FileNotFoundException("The file path was invalid", nameof(_mupenFile));
       }
 
-      M64 m64;
-      using (var reader = new BinaryReader(_mupenFile.Open(FileMode.Open, FileAccess.Read)))
+      using var reader = new BinaryReader(_mupenFile.Open(FileMode.Open, FileAccess.Read));
+
+      var m64 = new M64
       {
-        var inputs = new List<InputModel>();
+        Version = reader.ReadBytesAndConvertUInt32(0x4),
+        VerticalInterrupts = reader.ReadBytesAndConvertUInt32(0xC),
+        RerecordCount = reader.ReadBytesAndConvertUInt32(0x10),
+        ViPerSecond = reader.ReadByte(0x15),
+        NumberOfControllers = reader.ReadByte(0x16),
+        InputFrames = reader.ReadBytesAndConvertUInt32(0x18),
+        MovieStartType = reader.ReadBytesAndConvertUInt16(0x1C),
+        ControllerFlags = reader.ReadBytesAndConvertUInt32(0x20),
+        NameOfRom = reader.ReadBytesAndConvertString(0xC4, Encoding.ASCII),
+        Crc32 = reader.ReadBytesAndConvertUInt32(0xE4),
+        CountryCode = reader.ReadBytesAndConvertUInt16(0xE8),
+        Author = reader.ReadBytesAndConvertString(0x222, Encoding.UTF8),
+        MovieDescription = reader.ReadBytesAndConvertString(0x222, Encoding.UTF8)
+      };
 
-        // Is this how you offset to 0x400, then ready 4-bytes at a time??
-        // According to the documentation this is the case.
-        reader.BaseStream.Seek(400, SeekOrigin.Begin);
-        while (reader.BaseStream.Position != reader.BaseStream.Length)
-        {
-          // InputModel has implicit cast operator for byte[]
-          // Unit testing shows this works
-          inputs.Add(reader.ReadBytes(4));
-        }
 
-        m64 = new M64
-        {
-          Inputs = inputs
-        };
+      // Is this how you offset to 0x400, then ready 4-bytes at a time??
+      // According to the documentation this is the case.
+      var frame = 0;
+      reader.BaseStream.Seek(0x400, SeekOrigin.Begin);
+      while (reader.BaseStream.Position != reader.BaseStream.Length && frame < m64.InputFrames)
+      {
+        // InputModel has implicit cast operator for byte[]
+        // Unit testing shows this works
+        m64.Inputs.Add(reader.ReadBytes(4));
+        frame++;
       }
 
       return m64;
