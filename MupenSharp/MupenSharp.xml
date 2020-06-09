@@ -6,6 +6,7 @@
     <members>
         <member name="T:MupenSharp.Attributes.StringEncodingAttribute">
             <summary>
+              Attribute used to specify a string encoding and byte size.
             </summary>
         </member>
         <member name="P:MupenSharp.Attributes.StringEncodingAttribute.Encoding">
@@ -17,6 +18,13 @@
             <summary>
               The size of the string in bytes
             </summary>
+        </member>
+        <member name="M:MupenSharp.Attributes.StringEncodingAttribute.#ctor(MupenSharp.FileParsing.Encoding,System.Int32)">
+            <summary>
+              Attribute used to specify a string encoding and byte size.
+            </summary>
+            <param name="encoding">The type of encoding of the string.</param>
+            <param name="byteSize">The number of bytes of the string.</param>
         </member>
         <member name="T:MupenSharp.Extensions.EnumExtensions">
             <summary>
@@ -68,7 +76,7 @@
         </member>
         <member name="T:MupenSharp.Models.M64">
             <summary>
-              Stores data of a .m64 file
+              Stores data of a .m64 file.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.Version">
@@ -83,22 +91,22 @@
         </member>
         <member name="P:MupenSharp.Models.M64.RerecordCount">
             <summary>
-              The number of file rerecords
+              The number of file rerecords.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.ViPerSecond">
             <summary>
-              Frames (vertical interrupts) per second
+              Frames (vertical interrupts) per second.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.NumberOfControllers">
             <summary>
-              The number of controllers enabled for the file
+              The number of controllers enabled for the file.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.InputFrames">
             <summary>
-              The number of input samples from the controllers
+              The number of input samples from the controllers.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.MovieStartType">
@@ -116,7 +124,7 @@
                 <item>
                   <term>1</term>
                   <term>
-                    movie begins from snapshot (the snapshot will be loaded from an external file with the movie filename
+                    movie begins from snapshot (the snapshot will be loaded from an external file with the movie filename.
                     and a .st extension)
                   </term>
                 </item>
@@ -137,7 +145,7 @@
         </member>
         <member name="P:MupenSharp.Models.M64.ControllerFlags">
             <summary>
-              Flags set for each controller
+              Flags set for each controller.
               <list type="bullet">
                 <item>
                   <term>bit 0</term>
@@ -163,7 +171,63 @@
         </member>
         <member name="P:MupenSharp.Models.M64.NameOfRom">
             <summary>
-            The internal name of ROM used when recording, directly from ROM.
+              The internal name of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.Crc32">
+            <summary>
+              CRC32 of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.CountryCode">
+            <summary>
+              The country code of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.Author">
+            <summary>
+              The Author info of the movie.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.MovieDescription">
+            <summary>
+              The movie description info.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.Inputs">
+            <summary>
+              The input for every input frame, containing analogue x, y positions and buttons pressed.
+            </summary>
+        </member>
+        <member name="T:MupenSharp.Resources.ExceptionsResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.ArgumentIsNull">
+            <summary>
+              Looks up a localized string similar to {0} is null.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.CannotBeNullOrWhitespace">
+            <summary>
+              Looks up a localized string similar to Value cannot be null or whitespace..
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.InvalidFilePath">
+            <summary>
+              Looks up a localized string similar to The file path is invalid..
             </summary>
         </member>
     </members>

@@ -4,10 +4,10 @@
 // 
 // Solution: MupenMovieEditor
 // Project: MupenSharp
-// File Name: Input.cs
+// File Name: ControllerInput.cs
 // 
 // Current Data:
-// 2020-05-12 7:11 PM
+// 2020-06-09 10:36 PM
 // 
 // Creation Date:
 // 2020-05-12 5:07 PM
@@ -19,7 +19,7 @@ using System;
 namespace MupenSharp.Models
 {
   [Flags]
-  public enum Input
+  public enum ControllerInput
   {
     CRight = 0x0001,
     CLeft = 0x0002,

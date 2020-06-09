@@ -7,7 +7,7 @@
 // File Name: M64.cs
 // 
 // Current Data:
-// 2020-05-13 7:47 PM
+// 2020-06-09 11:10 PM
 // 
 // Creation Date:
 // 2020-05-12 5:07 PM
@@ -217,17 +217,10 @@ namespace MupenSharp.Models
     /// </summary>
     public ObservingCollection<InputModel> Inputs { get; } = new ObservingCollection<InputModel>();
 
-    /// <summary>
-    ///   Stores data of a .m64 file.
-    /// </summary>
     public M64()
     {
-      PropertyChanged += NotifyUpdateInputs;
-    }
-
-    private void NotifyUpdateInputs(object sender, PropertyChangedEventArgs e)
-    {
-      OnPropertyChanged(nameof(Inputs));
+      // Notify change when Inputs notifies change
+      ((INotifyPropertyChanged) Inputs).PropertyChanged += delegate { OnPropertyChanged(GetType().FullName); };
     }
   }
 }

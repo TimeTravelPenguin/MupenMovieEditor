@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-05-13 10:39 AM
+// 2020-06-09 10:39 PM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -19,25 +19,20 @@ using MupenSharp.FileParsing;
 
 namespace ConsoleTesting
 {
-  internal static class Program
+  internal class Program
   {
-    private static void Main()
+    public static void Main()
     {
-      const string path = @"D:\_Data\Desktop\Shining Atop the Pyramid.m64";
+      const string path = @"D:\_Data\Desktop\To the Top of the Fortress.m64";
+
       var parser = new M64Parser();
       parser.SetFile(path);
       var m64 = parser.Parse();
 
-      var i = 1;
-      foreach (var input in m64.Inputs)
-      {
-        Console.WriteLine($"{i++}: {input}");
-      }
+      Console.WriteLine(m64.Author);
+      Console.WriteLine(m64.RerecordCount);
 
-      Console.WriteLine();
-      Console.WriteLine(m64.InputFrames);
-
-      Console.ReadKey();
+      Console.ReadKey(true);
     }
   }
 }

@@ -7,7 +7,7 @@
 // File Name: M64Parser.cs
 // 
 // Current Data:
-// 2020-05-13 5:05 PM
+// 2020-06-09 10:26 PM
 // 
 // Creation Date:
 // 2020-05-12 5:22 PM
@@ -18,6 +18,7 @@ using System;
 using System.IO;
 using MupenSharp.Extensions;
 using MupenSharp.Models;
+using MupenSharp.Resources;
 
 namespace MupenSharp.FileParsing
 {
@@ -29,7 +30,7 @@ namespace MupenSharp.FileParsing
     {
       if (string.IsNullOrWhiteSpace(path))
       {
-        throw new ArgumentException("Value cannot be null or whitespace.", nameof(path));
+        throw new ArgumentException(ExceptionsResource.CannotBeNullOrWhitespace, nameof(path));
       }
 
       if (File.Exists(path))
@@ -39,15 +40,21 @@ namespace MupenSharp.FileParsing
       else
       {
         _mupenFile = null;
-        throw new FileNotFoundException("The file path was invalid", nameof(path));
+        throw new FileNotFoundException(ExceptionsResource.InvalidFilePath, nameof(path));
       }
+    }
+
+    public M64 Parse(string path)
+    {
+      SetFile(path);
+      return Parse();
     }
 
     public M64 Parse()
     {
       if (!_mupenFile.Exists)
       {
-        throw new FileNotFoundException("The file path was invalid", nameof(_mupenFile));
+        throw new FileNotFoundException(ExceptionsResource.InvalidFilePath, nameof(_mupenFile));
       }
 
       using var reader = new BinaryReader(_mupenFile.Open(FileMode.Open, FileAccess.Read));
@@ -73,7 +80,7 @@ namespace MupenSharp.FileParsing
       reader.BaseStream.Seek(0x400, SeekOrigin.Begin);
       while (reader.BaseStream.Position != reader.BaseStream.Length && frame < m64.InputFrames)
       {
-        m64.Inputs.Add(reader.ReadBytes(4));
+        m64.Inputs.Add((InputModel)reader.ReadBytes(4));
         frame++;
       }
 

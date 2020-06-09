@@ -7,7 +7,7 @@
 // File Name: InputModel.cs
 // 
 // Current Data:
-// 2020-05-13 7:53 PM
+// 2020-06-09 11:41 PM
 // 
 // Creation Date:
 // 2020-05-12 5:07 PM
@@ -15,9 +15,11 @@
 #endregion
 
 using System;
+using System.Globalization;
 using System.Linq;
 using JetBrains.Annotations;
 using MupenSharp.Extensions;
+using MupenSharp.Resources;
 using PenguinLib.PropertyChanged;
 
 namespace MupenSharp.Models
@@ -60,7 +62,7 @@ namespace MupenSharp.Models
     /// </param>
     public InputModel([NotNull] byte[] input)
     {
-      // input = AA BB CC DD
+      // input = byte[4] { AA, BB, CC, DD }
 
       if (input is null)
       {
@@ -85,8 +87,23 @@ namespace MupenSharp.Models
         .ToArray(), 0);
     }
 
-    public static implicit operator InputModel(byte[] input)
+    /// <summary>
+    ///   Implicitly converts a <see cref="byte" /> array into an InputModel
+    /// </summary>
+    /// <param name="input"></param>
+    public static explicit operator InputModel(byte[] input)
     {
+      if (input is null)
+      {
+        throw new ArgumentNullException(nameof(input),
+          string.Format(CultureInfo.InvariantCulture, ExceptionsResource.ArgumentIsNull, nameof(input)));
+      }
+
+      if (input.Length != 4)
+      {
+        throw new ArgumentException(ExceptionsResource.InputArrayInvalidLength, nameof(input));
+      }
+
       return new InputModel(input);
     }
 
@@ -95,7 +112,10 @@ namespace MupenSharp.Models
       return $"({Convert.ToInt32(X)},{Convert.ToInt32(Y)}) {this.GetInputs().Join(", ")}";
     }
 
-
+    /// <summary>
+    ///   Explicitly converts a
+    /// </summary>
+    /// <param name="input"></param>
     public static explicit operator byte[]([NotNull] InputModel input)
     {
       if (input is null)

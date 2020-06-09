@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PenguinLib\PenguinLib\PenguinLib.csproj">
+      <Project>{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}</Project>
+      <Name>PenguinLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MupenSharp\MupenSharp.csproj">
       <Project>{84baad70-8ff4-467e-884e-0bc91f0d5f50}</Project>
       <Name>MupenSharp</Name>

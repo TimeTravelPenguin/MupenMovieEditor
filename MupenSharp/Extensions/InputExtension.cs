@@ -22,10 +22,10 @@ namespace MupenSharp.Extensions
 {
   public static class InputExtension
   {
-    public static IEnumerable<Input> GetInputs(this InputModel inputModel)
+    public static IEnumerable<ControllerInput> GetInputs(this InputModel inputModel)
     {
-      return EnumExtensions.EnumToArray<Input>()
-        .Where(input => ((Input) inputModel.Buttons).HasFlag(input));
+      return EnumExtensions.EnumToArray<ControllerInput>()
+        .Where(input => ((ControllerInput) inputModel.Buttons).HasFlag(input));
     }
   }
 }
