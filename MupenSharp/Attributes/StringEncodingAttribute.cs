@@ -16,6 +16,7 @@
 
 using System;
 using JetBrains.Annotations;
+using MupenSharp.Enums;
 using MupenSharp.FileParsing;
 
 namespace MupenSharp.Attributes

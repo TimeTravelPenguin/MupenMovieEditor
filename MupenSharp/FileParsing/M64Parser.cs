@@ -16,6 +16,7 @@
 
 using System;
 using System.IO;
+using MupenSharp.Enums;
 using MupenSharp.Extensions;
 using MupenSharp.Models;
 using MupenSharp.Resources;

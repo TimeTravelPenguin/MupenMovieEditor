@@ -16,6 +16,7 @@
 
 using System.ComponentModel;
 using MupenSharp.Attributes;
+using MupenSharp.Enums;
 using MupenSharp.FileParsing;
 using PenguinLib.Observable;
 using PenguinLib.PropertyChanged;

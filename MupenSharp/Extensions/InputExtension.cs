@@ -16,6 +16,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using MupenSharp.Enums;
 using MupenSharp.Models;
 
 namespace MupenSharp.Extensions

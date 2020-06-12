@@ -15,6 +15,7 @@
 #endregion
 
 using System;
+using MupenSharp.Enums;
 
 namespace MupenSharp.FileParsing
 {

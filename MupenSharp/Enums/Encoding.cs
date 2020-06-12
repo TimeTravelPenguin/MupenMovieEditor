@@ -14,7 +14,7 @@
 
 #endregion
 
-namespace MupenSharp.FileParsing
+namespace MupenSharp.Enums
 {
   public enum Encoding
   {

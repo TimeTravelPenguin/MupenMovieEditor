@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using JetBrains.Annotations;
+using MupenSharp.Enums;
 using MupenSharp.FileParsing;
 using MupenSharp.Resources;
 

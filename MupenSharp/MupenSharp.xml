@@ -19,7 +19,7 @@
               The size of the string in bytes
             </summary>
         </member>
-        <member name="M:MupenSharp.Attributes.StringEncodingAttribute.#ctor(MupenSharp.FileParsing.Encoding,System.Int32)">
+        <member name="M:MupenSharp.Attributes.StringEncodingAttribute.#ctor(MupenSharp.Enums.Encoding,System.Int32)">
             <summary>
               Attribute used to specify a string encoding and byte size.
             </summary>
@@ -73,6 +73,18 @@
                 hex input is NOT REVERSED.
               </remarks>
             </param>
+        </member>
+        <member name="M:MupenSharp.Models.InputModel.op_Explicit(System.Byte[])~MupenSharp.Models.InputModel">
+            <summary>
+              Implicitly converts a <see cref="T:System.Byte" /> array into an InputModel
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:MupenSharp.Models.InputModel.op_Explicit(MupenSharp.Models.InputModel)~System.Byte[]">
+            <summary>
+              Explicitly converts a
+            </summary>
+            <param name="input"></param>
         </member>
         <member name="T:MupenSharp.Models.M64">
             <summary>
@@ -223,6 +235,11 @@
         <member name="P:MupenSharp.Resources.ExceptionsResource.CannotBeNullOrWhitespace">
             <summary>
               Looks up a localized string similar to Value cannot be null or whitespace..
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Resources.ExceptionsResource.InputArrayInvalidLength">
+            <summary>
+              Looks up a localized string similar to The array is of an invalid length. The byte[] should be of length 4..
             </summary>
         </member>
         <member name="P:MupenSharp.Resources.ExceptionsResource.InvalidFilePath">

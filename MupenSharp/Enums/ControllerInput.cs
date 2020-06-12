@@ -16,7 +16,7 @@
 
 using System;
 
-namespace MupenSharp.Models
+namespace MupenSharp.Enums
 {
   [Flags]
   public enum ControllerInput
