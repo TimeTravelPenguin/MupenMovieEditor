@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor", "MupenMovieEditor\MupenMovieEditor.csproj", "{34CE62C5-4DB5-4539-8E62-6117FAE68082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTesting", "ConsoleTesting\ConsoleTesting.csproj", "{999DC32F-0BCA-4735-BDBA-31D4B92B667D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M64BatchRename", "ConsoleTesting\M64BatchRename.csproj", "{999DC32F-0BCA-4735-BDBA-31D4B92B667D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor.Tests", "MupenMovieEditor.Tests\MupenMovieEditor.Tests.csproj", "{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}"
 EndProject

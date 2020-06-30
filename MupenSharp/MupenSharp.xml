@@ -42,6 +42,126 @@
               Returns an array of type <typeparamref name="T" />
             </returns>
         </member>
+        <member name="P:MupenSharp.Models.IM64.Version">
+            <summary>
+              Version number. Should be 3.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.VerticalInterrupts">
+            <summary>
+              The number of frames (vertical interrupts).
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.RerecordCount">
+            <summary>
+              The number of file rerecords.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.ViPerSecond">
+            <summary>
+              Frames (vertical interrupts) per second.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.NumberOfControllers">
+            <summary>
+              The number of controllers enabled for the file.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.MovieStartType">
+            <summary>
+              The movie start type.
+              <list type="table">
+                <listheader>
+                  <term>
+                    Value
+                  </term>
+                  <term>
+                    Description
+                  </term>
+                </listheader>
+                <item>
+                  <term>1</term>
+                  <term>
+                    movie begins from snapshot (the snapshot will be loaded from an external file with the movie filename.
+                    and a .st extension)
+                  </term>
+                </item>
+                <item>
+                  <term> 2</term>
+                  <term>
+                    movie begins from power-on
+                  </term>
+                </item>
+                <item>
+                  <term>other values</term>
+                  <term>
+                    invalid movie
+                  </term>
+                </item>
+              </list>
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.ControllerFlags">
+            <summary>
+              Flags set for each controller.
+              <list type="bullet">
+                <item>
+                  <term>bit 0</term>
+                  <description>
+                    Controller 1 present
+                  </description>
+                </item>
+                <item>
+                  <term>bit 4</term>
+                  <description>
+                    Controller 1 has mempak
+                  </description>
+                </item>
+                <item>
+                  <term>bit 8</term>
+                  <description>
+                    Controller 1 has rumblepak
+                  </description>
+                </item>
+              </list>
+              +1..3 for controllers 2..4.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.NameOfRom">
+            <summary>
+              The internal name of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.Crc32">
+            <summary>
+              CRC32 of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.CountryCode">
+            <summary>
+              The country code of ROM used when recording, directly from ROM.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.MovieDescription">
+            <summary>
+              The movie description info.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.Inputs">
+            <summary>
+              The input for every input frame, containing analogue x, y positions and buttons pressed.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.InputFrames">
+            <summary>
+              The number of input samples from the controllers.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.IM64.Author">
+            <summary>
+              The Author info of the movie.
+            </summary>
+        </member>
         <member name="M:MupenSharp.Models.InputModel.#ctor(System.Byte[])">
             <summary>
               InputModel representing data contained within an .m64 file.
@@ -114,11 +234,6 @@
         <member name="P:MupenSharp.Models.M64.NumberOfControllers">
             <summary>
               The number of controllers enabled for the file.
-            </summary>
-        </member>
-        <member name="P:MupenSharp.Models.M64.InputFrames">
-            <summary>
-              The number of input samples from the controllers.
             </summary>
         </member>
         <member name="P:MupenSharp.Models.M64.MovieStartType">
@@ -196,11 +311,6 @@
               The country code of ROM used when recording, directly from ROM.
             </summary>
         </member>
-        <member name="P:MupenSharp.Models.M64.Author">
-            <summary>
-              The Author info of the movie.
-            </summary>
-        </member>
         <member name="P:MupenSharp.Models.M64.MovieDescription">
             <summary>
               The movie description info.
@@ -209,6 +319,16 @@
         <member name="P:MupenSharp.Models.M64.Inputs">
             <summary>
               The input for every input frame, containing analogue x, y positions and buttons pressed.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.InputFrames">
+            <summary>
+              The number of input samples from the controllers.
+            </summary>
+        </member>
+        <member name="P:MupenSharp.Models.M64.Author">
+            <summary>
+              The Author info of the movie.
             </summary>
         </member>
         <member name="T:MupenSharp.Resources.ExceptionsResource">
