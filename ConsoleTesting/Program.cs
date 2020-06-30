@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-06-10 12:40 PM
+// 2020-06-15 2:01 PM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -26,8 +26,6 @@ namespace ConsoleTesting
 {
   internal class Program
   {
-    private static string _baseDir;
-
     public static void Main()
     {
       Console.WriteLine(@"DO NOT USE THIS IF YOU HAVE NO BACKUP FILES");
