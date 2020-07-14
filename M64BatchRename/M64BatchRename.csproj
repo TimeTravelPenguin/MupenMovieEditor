@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{999DC32F-0BCA-4735-BDBA-31D4B92B667D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleTesting</RootNamespace>
-    <AssemblyName>ConsoleTesting</AssemblyName>
+    <RootNamespace>M64BatchRename</RootNamespace>
+    <AssemblyName>M64BatchRename</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -3,11 +3,11 @@
 // Name: Phillip Smith
 // 
 // Solution: MupenMovieEditor
-// Project: ConsoleTesting
+// Project: M64BatchRename
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-06-15 2:01 PM
+// 2020-07-14 11:03 AM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -22,7 +22,7 @@ using System.Text.RegularExpressions;
 using MupenSharp.Enums;
 using MupenSharp.FileParsing;
 
-namespace ConsoleTesting
+namespace M64BatchRename
 {
   internal class Program
   {
