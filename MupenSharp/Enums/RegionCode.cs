@@ -7,14 +7,12 @@
 // File Name: RegionCode.cs
 // 
 // Current Data:
-// 2020-06-10 11:37 AM
+// 2020-07-14 10:59 AM
 // 
 // Creation Date:
 // 2020-06-10 11:37 AM
 
 #endregion
-
-using System;
 
 namespace MupenSharp.Enums
 {
@@ -23,6 +21,7 @@ namespace MupenSharp.Enums
   {
     U = 0xFF2B5A63,
     J = 0xE3DAA4E,
-    Ghost = 0x95ED43A4
+    Ghost_v1 = 0x95ED43A4,
+    Ghost_v2 = 0xAF5E2D01
   }
 }
