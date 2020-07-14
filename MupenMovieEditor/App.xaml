@@ -10,9 +10,10 @@
         <ResourceDictionary Source="ControlStyles/MenuItemDark.xaml" />
       </ResourceDictionary.MergedDictionaries>
 
-      <FontFamily x:Key="Webdings">pack://application:,,,/Font/#Webdings</FontFamily>
+      <FontFamily x:Key="MaterialIcons">pack://application:,,,/Font/#Material Icons</FontFamily>
 
-      <Brush x:Key="BrushTitleBar">#212121</Brush>
+      <Brush x:Key="BrushTitleBar">#191919</Brush>
+      <Brush x:Key="BrushMenuBar">#222222</Brush>
       <Brush x:Key="BrushWindowBackground">#2b2b2b</Brush>
       <Brush x:Key="BrushLightBorder">#8a8a8a</Brush>
       <Brush x:Key="BrushText">#ededed</Brush>
