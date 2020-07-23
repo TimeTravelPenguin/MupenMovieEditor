@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor", "MupenMovieEditor\MupenMovieEditor.csproj", "{34CE62C5-4DB5-4539-8E62-6117FAE68082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M64BatchRename", "ConsoleTesting\M64BatchRename.csproj", "{999DC32F-0BCA-4735-BDBA-31D4B92B667D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor.Tests", "MupenMovieEditor.Tests\MupenMovieEditor.Tests.csproj", "{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenguinLib", "..\PenguinLib\PenguinLib\PenguinLib.csproj", "{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}"
@@ -19,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MupenSharp", "MupenSharp\Mu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MupenSharp.Tests", "MupenSharp.Tests\MupenSharp.Tests.csproj", "{B85D0102-1A39-4E29-81C9-CBF414155AE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M64BatchRename", "M64BatchRename\M64BatchRename.csproj", "{999DC32F-0BCA-4735-BDBA-31D4B92B667D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +29,6 @@ Global
 		{34CE62C5-4DB5-4539-8E62-6117FAE68082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34CE62C5-4DB5-4539-8E62-6117FAE68082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34CE62C5-4DB5-4539-8E62-6117FAE68082}.Release|Any CPU.Build.0 = Release|Any CPU
-		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
