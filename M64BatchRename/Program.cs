@@ -7,7 +7,7 @@
 // File Name: Program.cs
 // 
 // Current Data:
-// 2020-07-14 11:03 AM
+// 2020-07-23 10:29 AM
 // 
 // Creation Date:
 // 2020-05-12 11:32 AM
@@ -41,10 +41,6 @@ namespace M64BatchRename
       {
         BeginRename(path);
       }
-
-      //var p = new M64Parser();
-      //var m64 = p.Parse(@"D:\ForkRepos\SM64TASArchive\Full Game\1 Key\04m20s30ms\1 Key.m64");
-      //Console.WriteLine($"{m64.Crc32:X}");
 
       Console.ReadKey(true);
     }
