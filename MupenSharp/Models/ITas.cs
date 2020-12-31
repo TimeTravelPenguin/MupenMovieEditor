@@ -18,6 +18,7 @@ namespace MupenSharp.Models
 {
   public interface ITas
   {
+    // TODO: Implement missing properties
     string Author { get; set; }
     uint InputFrames { get; set; }
   }
