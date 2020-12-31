@@ -74,7 +74,7 @@ namespace MupenSharp.FileParsing
         Crc32 = reader.ReadBytesAndConvertUInt32(0xE4),
         CountryCode = reader.ReadBytesAndConvertUInt16(0xE8),
         Author = reader.ReadBytesAndConvertString(0x222, Encoding.UTF8),
-        MovieDescription = reader.ReadBytesAndConvertString(0x222, Encoding.UTF8)
+        MovieDescription = reader.ReadBytesAndConvertString(0x300, Encoding.UTF8)
       };
 
       var frame = 0;
