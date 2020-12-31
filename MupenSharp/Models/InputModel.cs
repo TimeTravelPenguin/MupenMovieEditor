@@ -71,7 +71,7 @@ namespace MupenSharp.Models
 
       if (input.Length != 4)
       {
-        throw new InvalidOperationException($"{nameof(input)} should by 4 bytes, not {input.Length}");
+        throw new InvalidOperationException($"{nameof(input)} should be 4 bytes, not {input.Length}");
       }
 
       // X = CC
