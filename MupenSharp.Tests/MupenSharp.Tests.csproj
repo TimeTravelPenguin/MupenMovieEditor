@@ -20,8 +20,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MupenSharp\MupenSharp.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -7,15 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor", "MupenMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MupenMovieEditor.Tests", "MupenMovieEditor.Tests\MupenMovieEditor.Tests.csproj", "{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenguinLib", "..\PenguinLib\PenguinLib\PenguinLib.csproj", "{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PenguinLib.Tests", "..\PenguinLib\PenguinLib.Tests\PenguinLib.Tests.csproj", "{F1170946-CD7C-4BD8-BE3F-B151830FCA20}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demos", "..\PenguinLib\Demos\Demos.csproj", "{E945DDFE-0687-43CD-8079-E679FB52E4A5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MupenSharp", "MupenSharp\MupenSharp.csproj", "{1531EE7C-B48C-4C0E-86DE-69986950017A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MupenSharp.Tests", "MupenSharp.Tests\MupenSharp.Tests.csproj", "{B85D0102-1A39-4E29-81C9-CBF414155AE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M64BatchRename", "M64BatchRename\M64BatchRename.csproj", "{999DC32F-0BCA-4735-BDBA-31D4B92B667D}"
 EndProject
@@ -33,26 +25,10 @@ Global
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF5DC19A-5EF6-4D1F-ACE9-ADBC1816214B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{099363DE-01FA-4A61-8CF6-976ABBBA1CA4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1170946-CD7C-4BD8-BE3F-B151830FCA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1170946-CD7C-4BD8-BE3F-B151830FCA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1170946-CD7C-4BD8-BE3F-B151830FCA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1170946-CD7C-4BD8-BE3F-B151830FCA20}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E945DDFE-0687-43CD-8079-E679FB52E4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E945DDFE-0687-43CD-8079-E679FB52E4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E945DDFE-0687-43CD-8079-E679FB52E4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E945DDFE-0687-43CD-8079-E679FB52E4A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1531EE7C-B48C-4C0E-86DE-69986950017A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1531EE7C-B48C-4C0E-86DE-69986950017A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1531EE7C-B48C-4C0E-86DE-69986950017A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1531EE7C-B48C-4C0E-86DE-69986950017A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B85D0102-1A39-4E29-81C9-CBF414155AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999DC32F-0BCA-4735-BDBA-31D4B92B667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
